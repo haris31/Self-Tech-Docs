@@ -1,0 +1,35 @@
+Pre-requisite
+Microsoft Azure Code Signing Directive
+From March 2023, Microsoft is requesting security vendors to sign binaries using Microsoft Azure Code Signing. As a result, new Palo Alto Networks Cortex XDR agent versions, released from March 2023 are required to have a specific Microsoft Windows patch, in order to install successfully. Note that machines without this patch will not be able to install or upgrade to newer versions of Palo Alto Networks Cortex XDR agent. This will only impact Microsoft Windows machines running Microsoft Windows 10 or below. Microsoft Windows 7 machines must have an extended support license in order to install the patch. Microsoft Windows 11 machines have this patch pre-installed. Additional information about this security patch and the specific patch number required per operating system build can be found here, KB5022661.
+To install the Palo Alto Networks Cortex XDR agents that were released after April 15, 2021, on endpoints running Microsoft Windows 7 editions, you must install update KB4474419.
+You can install the Palo Alto Networks Cortex XDR agent 5.0 versions released after April 15, 2021 only on endpoints running Microsoft Windows XP SP3 & later (32-bit), Microsoft Windows Server 2003 R2 SP2 and later (32-bit) , and Microsoft Windows POSReady 2009. Other operating systems are not supported.
+On endpoints running Microsoft Windows Vista SP1 & later and Microsoft Windows Embedded Standard 7 (SP 0), you can install all Palo Alto Networks Cortex XDR agent 5.0 versions up to and including 5.0.11.
+For the Palo Alto Networks Cortex XDR agent 5.x release installed on endpoints running a Microsoft Windows version that does not support SHA256 by default, you must install KB2868626 to establish a connection between Palo Alto Networks Cortex XDR server and the Palo Alto Networks Cortex XDR agent. This applies to Microsoft Windows Server 2003 R2 (32-bit) (SP2 & later), Microsoft Windows Server 2003 (32-bit) (SP2 & later), Microsoft Windows XP (32-bit) (SP3 & later), Microsoft Windows Server 2008 (all editions; FIPS Mode), and Microsoft Windows Vista (SP1 & later; FIPS Mode).
+
+Step by Step Installation
+Standard Cortex XDR agent installation is intended for standard physical endpoints or persistent virtual endpoints. Install Cortex XDR Agent Using the MSI or from the command-line using Install the Cortex XDR Agent 7.7 Using Msiexec.
+Install Cortex XDR Agent on Windows Endpoint (with Internet Connection)
+Use the following workflow to install the Cortex XDR agent using the MSI file.
+1.	Before installing the Cortex XDR agent on a Windows endpoint, verify that the system meets the requirements described in the Cortex XDR Agent for Windows Requirements.
+2.	Download the Cortex XDR agent installer for Windows from Cortex XDR.
+Ensure that you download the Windows installer for the Windows architecture (x64 or x86) installed on the endpoint.
+3.	Run the MSI file on the endpoint.
+4.	Click Next.
+5.	Install the agent and next the installer will displays a User Account Control dialog.
+6.	Click Yes.
+7.	After you complete the installation, verify the Cortex XDR agent can establish a connection.
+
+
+Install Cortex XDR Agent Windows Endpoint (without Internet Connection / Using VM Broker)
+1.	Download the Cortex XDR agent installer for Windows from Cortex XDR.
+2.	Open command prompt, run as administrator
+3.	Execute command:
+msiexec /i c:\install\cortexxdr.msi proxy_list=”IP_BROKER_VM:8888” 
+Note: to install a Cortex XDR agent communicating through the Palo Alto Networks Broker VM , you must enter the Broker VM IP address and a port number. You can use default port 8888 or set another port number.
+
+Sample
+msiexec /i C:\XDR_Agent_for_Windows_x64.msi proxy_list=”192.168.1.100:8888”
+Note: You are not permitted to configure port numbers between 0-1024 and 63000-65000, or port numbers 4369, 5671, 5672, 5986, 6379, 8000, 9100, 15672, 25672. Additionally, you are not permitted to reuse port numbers you already assigned to the Syslog Collector applet.
+4.	After the initial installation, please verify the cortex agent are on endpoint list.
+
+

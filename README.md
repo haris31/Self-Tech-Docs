@@ -6,14 +6,17 @@ Ensure that you download the Windows installer for the Windows architecture (x64
 3.	Run the MSI file on the endpoint.
 
 The installer displays a welcome dialog.
-
  
+<img width="468" height="467" alt="image" src="https://github.com/user-attachments/assets/77f79931-c339-4837-ad56-0c6cd49e075e" />
+
 
 4.	Click Next.
- 
+ <img width="290" height="226" alt="image" src="https://github.com/user-attachments/assets/2b0c2aab-c95a-4d21-922a-a5cd42ccc7c5" />
+
 
 5.	Install the agent and next the installer will displays a User Account Control dialog.
- 
+ <img width="302" height="225" alt="image" src="https://github.com/user-attachments/assets/6d17c312-7667-4cb7-b815-3c805329158d" />
+
 6.	Click Yes.
 7.	After you complete the installation, verify the Cortex XDR agent can establish a connection.
 
@@ -29,6 +32,3 @@ Sample
 msiexec /i C:\XDR_Agent_for_Windows_x64.msi proxy_list=”192.168.1.100:8888”
 Note: You are not permitted to configure port numbers between 0-1024 and 63000-65000, or port numbers 4369, 5671, 5672, 5986, 6379, 8000, 9100, 15672, 25672. Additionally, you are not permitted to reuse port numbers you already assigned to the Syslog Collector applet.
 4.	After the initial installation, please verify the cortex agent are on endpoint list.
-
-
-<img width="468" height="467" alt="image" src="https://github.com/user-attachments/assets/77f79931-c339-4837-ad56-0c6cd49e075e" />

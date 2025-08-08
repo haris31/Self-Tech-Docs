@@ -1,21 +1,18 @@
 Install Cortex XDR Agent on Windows Endpoint (with Internet Connection)
+
 Use the following workflow to install the Cortex XDR agent using the MSI file.
 1.	Before installing the Cortex XDR agent on a Windows endpoint, verify that the system meets the requirements described in the Cortex XDR Agent for Windows Requirements.
 2.	Download the Cortex XDR agent installer for Windows from Cortex XDR.
 Ensure that you download the Windows installer for the Windows architecture (x64 or x86) installed on the endpoint.
 3.	Run the MSI file on the endpoint.
-
 The installer displays a welcome dialog.
- 
-<img width="468" height="467" alt="image" src="https://github.com/user-attachments/assets/77f79931-c339-4837-ad56-0c6cd49e075e" />
-
+<img width="271" height="211" alt="image" src="https://github.com/user-attachments/assets/3a705e4d-35c8-4440-be0b-13c6057d204e" />
 
 4.	Click Next.
- <img width="290" height="226" alt="image" src="https://github.com/user-attachments/assets/2b0c2aab-c95a-4d21-922a-a5cd42ccc7c5" />
-
+<img width="290" height="226" alt="image" src="https://github.com/user-attachments/assets/2b0c2aab-c95a-4d21-922a-a5cd42ccc7c5" />
 
 5.	Install the agent and next the installer will displays a User Account Control dialog.
- <img width="302" height="225" alt="image" src="https://github.com/user-attachments/assets/6d17c312-7667-4cb7-b815-3c805329158d" />
+<img width="302" height="225" alt="image" src="https://github.com/user-attachments/assets/6d17c312-7667-4cb7-b815-3c805329158d" />
 
 6.	Click Yes.
 7.	After you complete the installation, verify the Cortex XDR agent can establish a connection.
